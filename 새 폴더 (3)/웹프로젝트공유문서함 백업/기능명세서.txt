@@ -1,0 +1,106 @@
+package com.cinema.user - 회원, 비회원, 마이페이지
+UserDAO - 회원 DB업무 처리
+User_LoginOk - 회원 로그인 페이지
+User_LogoutOk - 회원 로그아웃 페이지
+User_SignUpOk - 비회원 회원가입 페이지
+User_Mypage - 회원 마이 페이지
+User_InfoModify - 회원 개인 정보 수정 페이지
+User_Point - 회원 마이 포인트 페이지
+User_PreferenceTheater - 회원 선호 극장 페이지
+User_Coupon - 회원 쿠폰 페이지
+User_TicketingHistory - 회원 예매 내역 페이지
+User_Event - 회원 이벤트 페이지
+User_PersonalQuestion - 회원 문의내역 페이지
+User_PreferenceMovie - 회원 선호 영화 페이지
+
+package com.cinema.movie - 영화
+Movie_Main - 영화 메인 페이지
+MovieDAO - 영화 메인페이지 DB업부 처리
+Movie_Detail - 영화 상세정보 페이지
+Movie_Pre - 영화 상영예정 페이지
+PreDAO - 영화 상영예정 페이지 DB업무 처리
+
+package com.cinema.ticketing - 예매
+Ticketing_Main - 예매 메인 페이지
+TicketingDAO - 예매 메인 페이지 DB업무 처리
+Ticketing_Seat - 예매 좌석 선택 페이지
+SeatDAO - 예매 좌석 선택 페이지 DB업무 처리
+Ticketing_Pay - 예매 결제 페이지
+PayDAO - 예매 결제 패이지 DB업무 처리
+
+package com.cinema.theater - 극장
+Theater_Main - 극장 메인 페이지
+TheaterDAO - 극장 메인 페이지 DB업무 처리
+
+package com.cinema.store - 매점
+Store_Main - 매점 메인 페이지
+StoreDAO - 매점 메인 페이지 DB업무 처리
+Store_Detail - 매점 상세정보 페이지
+DetailDAO - 매점 상세정보 페이지 DB업무 처리
+Store_Gift - 매점 상세정보 선물 페이지
+GiftDAO - 매점 상세정보 선물 페이지 DB업무 처리
+Store_Pay - 매점 결제 페이지
+PayDAO - 매점 결제 페이지 DB업무 처리
+Store_Buy - 매점 구매 페이지
+BuyDAO - 매접 구매 페이지 DB업무 처리
+
+package com.cinema.servicecenter - 고객센터
+Servicecenter_Main - 고객센터 메인 페이지
+ServicecenterDAO - 고객센터 메인 페이지 DB업무 처리
+Servicecenter_Question - 고객센터 자주묻는 페이지
+QuestionDAO - 고객센터 자주묻는 페이지DB업무 처리
+Servicecenter_Lost - 고객센터 분실물 페이지
+LostDAO - 고객센터 분실물 페이지DB업무 처리
+Servicecenter_LostWrite - 고객센터 분실물 작성 페이지
+LostWriteDAO - 고객센터 분실물 작성 페이지DB업무 처리
+Servicecenter_Personal - 고객센터 1:1문의 페이지
+PersonalDAO - 고객센터 1:1문의 페이지DB업무 처리
+Servicecenter_Rent - 고객센터 대관문의 페이지
+RentDAO - 고객센터 대관문의 페이지DB업무 처리
+
+package com.cinema.notice - 공지사항
+Notice_Main - 공지사항 메인 페이지
+MainDAO - 공지사항 메인 페이지DB 업무 처리
+
+package com.cinema.event - 이벤트&혜택
+Event_Main - 이벤트 메인 페이지
+MainDAO - 이벤트 메인 페이지DB업무 처리
+Event_Benefit - 이벤트 혜택 페이지
+BenefitDAO - 이벤트 혜택 페이지DB업무 처리
+
+package com.cinema.admin - 관리자
+Admin_Main - 관리자 메인 페이지
+AdminDAO - 관리자 메인 페이지DB업무 처리
+Admin_Movie - 관리자 영화 페이지
+MovieDAO - 관리자 영화 페이지DB업무 처리
+Admin_Ticketing - 관리자 영화예매 페이지
+TicketingDAO - 관리자 영화예매 페이지DB업무 처리
+Admin_Theater - 관리자 극장 페이지
+TheaterDAO - 관리자 극장 페이지DB업무 처리
+Admin_Store - 관리자 매점 페이지
+StoreDAO - 관리자 매점 페이지DB업무 처리
+Admin_Notice - 관리자 공지사항 페이지
+NoticeDAO - 관리자 공지사항 페이지DB업무 처리
+Admin_Event - 관리자 이벤트 페이지
+EventDAO - 관리자 이벤트 페이지DB업무 처리
+Admin_UserInfo - 관리자 회원정보 페이지
+UserInfoDAO - 관리자 회원정보 페이지DB업무 처리
+Admin_Preference - 관리자 선호도 페이지
+PreferenceDAO - 관리자 선호도 페이지DB업무 처리
+
+webapp
+	- asset
+		- css
+		- js
+		- fonts
+		- images
+			- images
+			- videos
+			- files
+
+webapp > WEB-INF > views
+	- movie
+	- movie > member
+	- movie > admin
+	- movie > movie
+	......
