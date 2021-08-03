@@ -21,7 +21,7 @@ create table tblUser (
  userTheater varchar2(50), 	              -- 선호극장
  userQuestion number not null,            -- 질문
  userAnswer varchar2(300) not null,       -- 답변
- userImage varchar2(100) default '/images/default.png' not null,     -- 프로필사진
+ userImage varchar2(100) default '/images/profile.png' not null,     -- 프로필사진
  userLv number default 1 not null,         -- 레벨
  userRegdate date default sysdate not null  --가입일
 
