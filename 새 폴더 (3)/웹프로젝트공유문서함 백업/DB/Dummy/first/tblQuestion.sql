@@ -7,6 +7,7 @@ questionContent varchar2(2000) not null	-- 글내용
 
 );
 
+
 create sequence seqQuestion;
 
 

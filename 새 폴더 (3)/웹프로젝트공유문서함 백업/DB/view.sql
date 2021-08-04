@@ -23,3 +23,11 @@ select  t.ticketingseq as ticketingSeq,
                             inner join tbltheater th 
                                 on s.theaterseq = th.theaterseq 
     order by s.scheduletime desc;
+
+
+
+
+
+create or replace view vwQuestion
+as
+select q.*,rownum as rnum from tblQuestion q order by q.questionseq desc;
