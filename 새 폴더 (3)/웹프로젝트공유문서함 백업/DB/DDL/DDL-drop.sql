@@ -62,7 +62,7 @@ drop sequence SeqLost;
 -- 9. 1:1문의 테이블
 drop table tblPersonal;
 -- 9. 1:1문의 시퀀스
-drop  sequence Seqpersonal;
+drop sequence seqPersonal;
 
 
 

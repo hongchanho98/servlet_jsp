@@ -27,7 +27,17 @@ select  t.ticketingseq as ticketingSeq,
 
 
 
-
 create or replace view vwQuestion
 as
 select q.*,rownum as rnum from tblQuestion q order by q.questionseq desc;
+
+
+
+
+create or replace view vwNotice
+as
+select n.*,rownum as rnum from (select * from tblNotice order by noticeseq desc) n;
+
+create or replace view vwMovie
+as
+select m.*,rownum as rnum from (select *from tblMovie order by movieOpen desc) m;

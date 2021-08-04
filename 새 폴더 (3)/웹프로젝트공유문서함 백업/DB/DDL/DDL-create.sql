@@ -121,11 +121,10 @@ create sequence Seqquestion;
 
 -- 7. 공지사항 테이블
 create table tblNotice(
-
-    noticeSeq number,                 -- 게시글 번호
-    noticeTime varchar2(100),         -- 글제목
-    noticeContent varchar2(2000),   -- 글내용
-    noticeDate date                   -- 등록일
+    noticeSeq number primary key,               -- 게시글 번호
+    noticeTime varchar2(100) not null,          -- 글제목
+    noticeContent varchar2(2000) not null,      -- 글내용
+    noticeDate date default sysdate not null    -- 등록일
 );
 
 
@@ -138,16 +137,16 @@ create sequence Seqnotice;
 -- 8. 대관문의 테이블
 create table tblRent(
 
- postSeq number primary key,                      -- 게시글번호(PK)
- userSeq number references tblUser (userSeq),    -- 회원번호(FK)
- theaterName VARCHAR2(30) not null,              -- 극장이름
-rentDate date not null,	                             -- 대관희망일
-movieName VARCHAR2(50) not null,                  -- 영화이름
-rentPeople number not null,		                     -- 관람인원
-rentTitle VARCHAR2(100) not null,	                 -- 글제목
-rentContent VARCHAR2(2000) not null,             -- 글내용	
-rentRegdate DATE not null,		                     -- 등록일
-rentCommentCheck VARCHAR2(1) default 'N'        -- 답변처리여부
+ postSeq number primary key,                      				-- 게시글번호(PK)
+ userSeq number not null references tblUser (userSeq),    		-- 회원번호(FK)
+ theaterName VARCHAR2(30) not null,  				-- 극장이름
+rentDate date not null,	                             			-- 대관희망일
+movieName VARCHAR2(50) not null,                  			-- 영화이름
+rentPeople number not null,		                     			-- 관람인원
+rentTitle VARCHAR2(100) not null,	                 			-- 글제목
+rentContent VARCHAR2(2000) not null,             			-- 글내용	
+rentRegdate DATE not null,		                     			-- 등록일
+rentCommentCheck VARCHAR2(1) default 'N'        			-- 답변처리여부
 );
 
 
@@ -159,19 +158,19 @@ create sequence Seqrent;
 -- 9. 1:1 문의 테이블
 create table tblPersonal(
 
- personalSeq number primary key,                  -- 게시글 번호(PK)
- userSeq number references tblUser (userSeq),    -- 회원번호(FK)
- theaterName VARCHAR2(50) not null,              -- 극장이름
- personalType VARCHAR2(30)  not null, 	         -- 문의유형
- personalTitle  VARCHAR2(100) not null,            -- 글제목
- personalContent VARCHAR2(2000) not null,        -- 글 내용
- personalPicture VARCHAR2(100) not null,           -- 사진첨부이름
- personalRegdate DATE not null,                     -- 등록일
- personalCommentCheck VARCHAR2(1) default 'N'   -- 답변처리여부
+ personalSeq number primary key,                  		-- 게시글 번호(PK)
+ userSeq number not null references tblUser(userSeq),   		 -- 회원번호(FK)
+ theaterName varchar2(50) not null,             			 -- 극장이름
+ personalType VARCHAR2(30)  not null, 	        		 -- 문의유형
+ personalTitle  VARCHAR2(100) not null,            		-- 글제목
+ personalContent VARCHAR2(2000) not null,       		 -- 글 내용
+ personalPicture VARCHAR2(100),           			-- 사진첨부이름
+ personalRegdate date default sysdate not null,                    	-- 등록일
+ personalCommentCheck varchar2(1) default 'N' not null   	-- 답변처리여부
 );
 
 -- 9. 1:1문의 시퀀스
-create sequence Seqpersonal;
+create sequence seqPersonal;
 --=====================================================
 
 -- 10. 분실물 문의 테이블
@@ -215,11 +214,11 @@ create sequence SeqStore;
 
 -- 12. 이벤트 댓글 테이블
 create table tblEventReply (
-
- eventSeq number not null references tblEvent (eventSeq),    -- 이벤트 번호
- eventComment VARCHAR2(500) not null,                          -- 댓글 내용
- eventCommentRegdate DATE not null,                             -- 등록일
- userSeq  number  not null	 	                                    -- 회원번호
+    eventReplySeq number primary key,
+    eventSeq number not null references tblEvent(eventSeq),
+    userSeq number not null references tblUser(userSeq),
+    eventComment varchar2(500) not null,
+    eventCommentRegdate date not null
 );
 
 -- 12. 이벤트 댓글 시퀀스
@@ -331,10 +330,6 @@ create table tblUserSeat (
 
 -- 19. 회원 좌석 시퀀스
 create sequence seqUserSeat;
-
-
-
-
 
 
 
