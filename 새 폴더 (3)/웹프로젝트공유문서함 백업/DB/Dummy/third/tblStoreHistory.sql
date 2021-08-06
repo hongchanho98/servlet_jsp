@@ -36,7 +36,6 @@ insert into tblStoreHistory values (seqStoreHistory.nextVal, 3, 52, '2021-04-29'
 insert into tblStoreHistory values (seqStoreHistory.nextVal, 18, 100, '2021-02-06', 8, 'y');
 insert into tblStoreHistory values (seqStoreHistory.nextVal, 7, 25, '2021-01-29', 9, 'y');
 insert into tblStoreHistory values (seqStoreHistory.nextVal, 20, 15, '2021-01-13', 9, 'n');
-
 commit;
 
 select * from tblStoreHistory;

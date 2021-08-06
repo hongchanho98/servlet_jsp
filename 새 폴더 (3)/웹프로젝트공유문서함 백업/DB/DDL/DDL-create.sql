@@ -248,7 +248,7 @@ create table tblSchedule(
     scheduleSeq number primary key,
     scheduleDate date not null,
     scheduleTime date not null,
-    theatherRoomName varchar(10) not null,
+    theaterRoomName varchar(10) not null,
     theaterSeq number not null references tblTheater(theaterSeq),
     movieSeq number not null references tblMovie(movieSeq),
     seatCount number default 150 not null
